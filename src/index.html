@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="Hamster/omg.jpg" alt="logo hamster" class="hamster">
+      <h1>¿Por qué dicen que mí boleto es falso? si lo compré en...</h1>
+    </div>
+    <img src="https://tickethamster.com.mx/wp-content/uploads/2022/12/tickethamster_logo-3-1024x115.png" alt="Logo">
+    <br>
+    <br>
+    <br>
+    <p>Termina tu comprá llenando el siguiente formulario</p>
+  </header>
+  <main>
+    <form action="">
+      <fieldset>
+        <legend>Datos del usuario</legend>
+        <label for="Name">Nombre(s)</label><br>
+        <input class="fieldset" type="text" id="name" name="Name" placeholder="Luisa Daniela"><br>
+        <br>
+        <label for="Lastame">Apellidos</label><br>
+        <input class="fieldset" type="text" id="lastname" name="Lastame" placeholder="Cedeño Pérez"><br>
+        <br>
+        <label for="Email">Correo electrónico</label><br>
+        <input class="fieldset" type="text" id="email" name="Email" placeholder="tickethamster@gmail.com"><br>
+        <br>
+        <label for="Phone">Teléfono</label><br>
+        <input class="fieldset" type="text" id="telefono" name="Phone" placeholder="(+52)5510921469"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+        <!--- oninput... es para que unicamente reciba numero --->
+        <br>
+        <label for="Cardnumber">Número de tarjeta</label><br>
+        <input class="fieldset" type="text" id="CardNumber" name="Cardnumber" placeholder="ej. 0000 0000 0000 0000"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="19"
+          required><br> <!----required atributo para poner un error al no ingresar un numero -->
+        <br>
+        <label for="MM/AA">Vigencia</label><br>
+        <input class="fieldset" type="text" id="MM/AA" name="MM/AA" maxlength="5" placeholder="ej. 02/25"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+        <br>
+        <label for="CVV">Codigo de seguridad</label><br>
+        <input class="fieldset" type="text" id="CVV" name="CVV" inputmode="numeric" maxlength="3" placeholder="ej. 126"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+        <br>
+        <br>
+        <div>
+          <input type="button" id="Compra" name="Compra" value="Realiza tu compra" class="bottonSubmit" required>
+        </div>
+
+
+
+
+
+
+
+      </fieldset>
+    </form>
+
+  </main>
+  <footer></footer>
+  <script src="index.js" type="module"></script>
+</body>
 </html>
