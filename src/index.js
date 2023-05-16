@@ -39,6 +39,7 @@ function verificacion() { //Tengo que poner la función de verificar hasta arrib
     //const Compra = CardNumber; // Me fatalta el elemento de mi primer constiable, ese fue el primer error de mi sintaxis en el botón //
     const Resultado = validator.isValid(CardNumber.value) //tmabien se pueden llamar a los valores dentro de ()//
 
+    
     if (Resultado === true) {
       alert("Tarejeta aprobada" + masked);
       CardNumber.value = masked //indicas que masked se ejecute en el valor de CardNumber//
